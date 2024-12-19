@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Recipe Book</h1>
+    </header>
+    <main>
+        <section id="add-recipe">
+            <h2>Add Recipe</h2>
+            <form id="recipe-form">
+                <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+                <textarea id="recipe-ingredients" placeholder="Ingredients (comma separated)" required></textarea>
+                <textarea id="recipe-steps" placeholder="Preparation Steps" required></textarea>
+                <input type="file" id="recipe-image" accept="image/*">
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+        
+        <section id="search-recipes">
+            <h2>Search Recipes</h2>
+            <input type="text" id="search-bar" placeholder="Search by name or ingredient...">
+        </section>
+        
+        <section id="recipe-list">
+            <h2>Recipes</h2>
+            <div id="recipes-container"></div>
+        </section>
+    </main>
+
+    <!-- Modal for viewing recipe details -->
+    <div id="recipe-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <img id="modal-image" alt="Recipe Image">
+            <h3 id="modal-title"></h3>
+            <p><strong>Ingredients:</strong></p>
+            <ul id="modal-ingredients"></ul>
+            <p><strong>Steps:</strong></p>
+            <p id="modal-steps"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
